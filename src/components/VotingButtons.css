@@ -1,0 +1,28 @@
+.vote-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 2.5rem;
+    margin-right: 1rem;
+}
+.vote-btn{
+    color: grey;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border: none;
+}
+.vote-btn:hover{
+    transform: scale(0.5);
+    color: darkslategray;
+}
+.vote-btn.upvoted{
+    color: orange;
+}
+.vote-btn.downvoted{
+    color: darkmagenta;
+}
+.score{
+    font-size: 1rem;
+    font-weight: bold;
+}

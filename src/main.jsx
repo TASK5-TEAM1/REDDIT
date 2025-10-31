@@ -1,15 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router } from 'react-router-dom';
-import App from './App.jsx';
-import { GlobalStateProvider } from './context/GlobalStateContext.jsx';
+import {StrictMode} from 'react'
+import {createRoot} from 'react-dom/client'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <Router>
-      <GlobalStateProvider>
-        <App />
-      </GlobalStateProvider>
-    </Router>
-  </React.StrictMode>
-);
+import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom';
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <BrowserRouter>
+    <App />
+    </BrowserRouter>
+  </StrictMode>,
+)
