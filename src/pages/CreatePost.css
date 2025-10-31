@@ -1,0 +1,49 @@
+.create-post{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.form-grp{
+    margin: 1rem;
+}
+.form-grp label{
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+.form-grp input,
+.form-grp textarea
+{
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+.submit-btn{
+    width: 100%;
+    padding:10px;
+    background-color: lightseagreen;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/*for responsiveness*/
+@media(max-width:48rem){
+    .create-post{
+        max-width: 44rem;
+        margin: 30px auto;
+        padding: 20px;
+        border: 2px solid white;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .submit-btn{
+        width: auto;
+        padding: 12px 30px;
+    }
+}

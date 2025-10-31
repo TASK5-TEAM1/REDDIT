@@ -1,34 +1,34 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import { Routes,Route,Link } from 'react-router-dom';
+import { CreatePost } from './pages/CreatePost';
+import VotingButtons from './components/VotingButtons';
+
+function TempHome() {
+  return(
+    <div style={{padding:'20px'}}>
+      <h2>Home(Test Page)</h2>
+      <p>Here is the voting buttons in action:</p>
+      <VotingButtons initialScore={10} initialLikes={null}/>
+
+      <p style={{marginTop:'20px'}}>Here is another one, already upvoted:</p>
+      <VotingButtons initialScore={42} initialLikes={true} />
+    </div>
+  );
+}
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <div>
+      <nav style={{padding:'10px',background:'#eee'}}>
+        <Link to="/">Home</Link> | <Link to="/submit">Create Post</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<TempHome />} />
+        <Route path="/submit" element={<CreatePost />}/>
+      </Routes>
+    </div>
+    
   )
 }
 
